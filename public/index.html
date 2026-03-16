@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apply to be a WhatsApp Admin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">💬</div>
+  <h1>Community / Lifestyle Channel — Admin Application</h1>
+  <a href="admin.html">Admin Dashboard →</a>
+</header>
+
+<div class="container">
+
+  <!-- Application Form -->
+  <div id="form-wrap">
+    <div class="card">
+      <div class="card-title">Apply to become an Admin</div>
+      <div class="card-subtitle">
+        Fill in the form below to apply for an admin role in our WhatsApp Community &amp; Lifestyle channel.
+        All fields marked <strong>*</strong> are required.
+      </div>
+
+      <div class="progress-label" id="progress-label">Step 0 of 10</div>
+      <div class="progress-wrap">
+        <div class="progress-bar" id="progress-bar"></div>
+      </div>
+
+      <form id="apply-form" novalidate>
+
+        <!-- Q1: Full Name -->
+        <div class="form-group">
+          <label for="fullName">1. Full Name *</label>
+          <input type="text" id="fullName" name="fullName" placeholder="e.g. Jane Doe" maxlength="100" />
+          <div class="error-msg" id="err-fullName">Please enter your full name.</div>
+        </div>
+
+        <!-- Q2: WhatsApp Number -->
+        <div class="form-group">
+          <label for="whatsappNumber">2. WhatsApp Number *</label>
+          <div class="hint">Include country code, e.g. +1 555 123 4567</div>
+          <input type="tel" id="whatsappNumber" name="whatsappNumber" placeholder="+1 555 123 4567" maxlength="25" />
+          <div class="error-msg" id="err-whatsappNumber">Please enter a valid WhatsApp number.</div>
+        </div>
+
+        <!-- Q3: Age Range -->
+        <div class="form-group">
+          <label for="ageRange">3. Age Range *</label>
+          <select id="ageRange" name="ageRange">
+            <option value="">— Select —</option>
+            <option value="Under 18">Under 18</option>
+            <option value="18–24">18–24</option>
+            <option value="25–34">25–34</option>
+            <option value="35–44">35–44</option>
+            <option value="45+">45+</option>
+          </select>
+          <div class="error-msg" id="err-ageRange">Please select your age range.</div>
+        </div>
+
+        <!-- Q4: Prior experience -->
+        <div class="form-group">
+          <label for="experience">4. Prior Group / Channel Experience *</label>
+          <select id="experience" name="experience">
+            <option value="">— Select —</option>
+            <option value="None">None — this would be my first time</option>
+            <option value="Some">Some — I've moderated small groups before</option>
+            <option value="Moderate">Moderate — I've managed channels regularly</option>
+            <option value="Extensive">Extensive — I've led large communities</option>
+          </select>
+          <div class="error-msg" id="err-experience">Please select your experience level.</div>
+        </div>
+
+        <!-- Q5: Skills -->
+        <div class="form-group">
+          <label>5. Relevant Skills (select all that apply)</label>
+          <div class="check-group" id="skills-group">
+            <label><input type="checkbox" name="skills" value="Content Creation" /> Content Creation</label>
+            <label><input type="checkbox" name="skills" value="Moderation" /> Moderation</label>
+            <label><input type="checkbox" name="skills" value="Conflict Resolution" /> Conflict Resolution</label>
+            <label><input type="checkbox" name="skills" value="Scheduling" /> Scheduling &amp; Planning</label>
+            <label><input type="checkbox" name="skills" value="Community Building" /> Community Building</label>
+            <label><input type="checkbox" name="skills" value="Other" /> Other</label>
+          </div>
+        </div>
+
+        <!-- Q6: Weekly Availability -->
+        <div class="form-group">
+          <label for="availability">6. Weekly Availability</label>
+          <select id="availability" name="availability">
+            <option value="">— Select —</option>
+            <option value="Less than 2 hours">Less than 2 hours/week</option>
+            <option value="2–5 hours">2–5 hours/week</option>
+            <option value="5–10 hours">5–10 hours/week</option>
+            <option value="More than 10 hours">More than 10 hours/week</option>
+          </select>
+        </div>
+
+        <!-- Q7: Time Zone -->
+        <div class="form-group">
+          <label for="timezone">7. Your Time Zone</label>
+          <input type="text" id="timezone" name="timezone" placeholder="e.g. GMT+2, EST, PST" maxlength="50" />
+        </div>
+
+        <!-- Q8: Why Admin -->
+        <div class="form-group">
+          <label for="whyAdmin">8. Why do you want to be an admin? *</label>
+          <div class="hint">Max 600 characters.</div>
+          <textarea id="whyAdmin" name="whyAdmin" maxlength="600" rows="4"
+                    placeholder="Tell us why you'd be a great admin for our community…"></textarea>
+          <div class="char-counter" id="why-counter">0 / 600</div>
+          <div class="error-msg" id="err-whyAdmin">Please tell us why you want to be an admin.</div>
+        </div>
+
+        <!-- Q9: Commitment Rating -->
+        <div class="form-group">
+          <label for="commitment">9. Commitment Level (1 = Low, 10 = Very High)</label>
+          <div class="slider-wrap">
+            <span>1</span>
+            <input type="range" id="commitment" name="commitment" min="1" max="10" value="5" />
+            <span>10</span>
+            <span class="slider-value" id="commitment-val">5</span>
+          </div>
+        </div>
+
+        <!-- Q10: Guidelines -->
+        <div class="form-group">
+          <label>10. Community Guidelines *</label>
+          <div class="check-group">
+            <label>
+              <input type="checkbox" id="agreedToGuidelines" name="agreedToGuidelines" />
+              I agree to follow and enforce the community guidelines, treat all members with respect,
+              and fulfill the responsibilities of an admin.
+            </label>
+          </div>
+          <div class="error-msg" id="err-agreedToGuidelines">You must agree to the community guidelines.</div>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" id="submit-btn">
+            Submit Application ✓
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Thank-you Screen -->
+  <div id="thank-you" class="card">
+    <div class="checkmark">✅</div>
+    <h2>Application Received!</h2>
+    <p>
+      Thank you for applying to be an admin of our Community / Lifestyle WhatsApp channel.
+      We'll review your application and get back to you via WhatsApp soon.
+    </p>
+  </div>
+
+</div><!-- /container -->
+
+<script src="form.js"></script>
+</body>
+</html>
