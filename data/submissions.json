@@ -1,1 +1,19 @@
-[]
+[
+  {
+    "id": "1773647247861",
+    "submittedAt": "2026-03-16T07:47:27.861Z",
+    "status": "pending",
+    "fullName": "Test User",
+    "whatsappNumber": "+1 555 123 4567",
+    "ageRange": "25–34",
+    "experience": "Some",
+    "skills": [
+      "Moderation"
+    ],
+    "availability": "2–5 hours",
+    "timezone": "GMT+2",
+    "whyAdmin": "I love this community and want to help it grow.",
+    "commitment": 8,
+    "agreedToGuidelines": true
+  }
+]
