@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — WhatsApp Admin Applications</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="logo">💬</div>
+  <h1>Admin Dashboard — Application Review</h1>
+  <a href="index.html">← Application Form</a>
+</header>
+
+<div class="container" style="max-width:900px;">
+
+  <!-- Stats -->
+  <div class="stats-bar">
+    <div class="stat-card total">
+      <div class="stat-number" id="stat-total">0</div>
+      <div class="stat-label">Total</div>
+    </div>
+    <div class="stat-card pending">
+      <div class="stat-number" id="stat-pending">0</div>
+      <div class="stat-label">Pending</div>
+    </div>
+    <div class="stat-card accepted">
+      <div class="stat-number" id="stat-accepted">0</div>
+      <div class="stat-label">Accepted</div>
+    </div>
+    <div class="stat-card rejected">
+      <div class="stat-number" id="stat-rejected">0</div>
+      <div class="stat-label">Rejected</div>
+    </div>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <input type="search" id="search-input" placeholder="Search by name, number, or message…" />
+    <div class="filter-tabs">
+      <button class="filter-tab active" data-status="all">All</button>
+      <button class="filter-tab" data-status="pending">Pending</button>
+      <button class="filter-tab" data-status="accepted">Accepted</button>
+      <button class="filter-tab" data-status="rejected">Rejected</button>
+    </div>
+  </div>
+
+  <!-- Applicant List -->
+  <div class="applicant-list" id="applicant-list">
+    <div class="empty-state">
+      <div class="empty-icon">📋</div>
+      <p>Loading applications…</p>
+    </div>
+  </div>
+
+</div>
+
+<script src="admin.js"></script>
+</body>
+</html>
